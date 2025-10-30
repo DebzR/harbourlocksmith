@@ -6,6 +6,20 @@
     <title>Site Admin</title>
     <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:24px}.loading{opacity:.7}</style>
   </head>
+<!-- Netlify Identity widget (needed for invite/accept + password set) -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  // After login, send the user into the CMS
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
   <body>
     <h1>Admin</h1>
     <p class="loading">Loading editor…</p>
