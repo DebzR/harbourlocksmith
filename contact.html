@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact | Harbour Locksmith & Security</title>
+<meta name="description" content="Harbour Locksmith & Security — trusted locksmiths for homes, shops and businesses. 24/7 emergency callouts across Kent.">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Locksmith",
+  "name": "Harbour Locksmith & Security",
+  "image": "https://example.com/assets/logo.svg",
+  "telephone": "+44 1234 567890",
+  "email": "info@harbourlocks.example",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kent",
+    "addressCountry": "GB"
+  },
+  "areaServed": [
+    "Kent",
+    "Maidstone",
+    "Medway"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/harbourlocks"
+  ]
+}
+</script>
+</head>
+<body>
+<div class="topbar">
+  <div class="container">
+    <div>🔓 24/7 Emergency Call‑Out • CRB Checked • Fully Insured</div>
+    <div><a href="tel:+441234567890">Call: 01234 567890</a> &nbsp;|&nbsp; <a href="/contact.html" class="">Get a Quote</a></div>
+  </div>
+</div>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="/index.html">
+      <img class="brand-logo" src="/assets/logo.svg" alt="Harbour Locksmith & Security logo">
+      <div>
+        <span class="brand-name">Harbour Locksmith & Security</span>
+        <span class="brand-sub">Residential • Commercial • Emergency</span>
+      </div>
+    </a>
+    <nav class="navlinks">
+      <a href="/index.html">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="btn">Contact</a>
+    </nav>
+    <button class="mobile-toggle" onclick="document.querySelector('.navlinks').style.display = (document.querySelector('.navlinks').style.display==='flex'?'none':'flex')">Menu ☰</button>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Contact us</h2>
+    <p>Tell us what you need help with and we’ll reply quickly with a clear quote. For urgent jobs, call us 24/7.</p>
+    <div class="split">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="card">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don’t fill this out: <input name="bot-field"></label></p>
+        <label>Name<br><input name="name" required style="width:100%;padding:10px;border:1px solid #d7e2ee;border-radius:8px"></label><br><br>
+        <label>Email<br><input name="email" type="email" required style="width:100%;padding:10px;border:1px solid #d7e2ee;border-radius:8px"></label><br><br>
+        <label>Phone<br><input name="phone" style="width:100%;padding:10px;border:1px solid #d7e2ee;border-radius:8px"></label><br><br>
+        <label>Message<br><textarea name="message" rows="6" required style="width:100%;padding:10px;border:1px solid #d7e2ee;border-radius:8px"></textarea></label><br><br>
+        <button class="btn" type="submit">Send message</button>
+        <a class="btn outline" href="tel:+441234567890" style="margin-left:8px">Or call 01234 567890</a>
+      </form>
+      <div>
+        <div class="card">
+          <h3>Coverage</h3>
+          <p>Maidstone, Medway, Sittingbourne, Ashford, Tonbridge and surrounding areas.</p>
+          <h3 style="margin-top:14px">Hours</h3>
+          <p>Open 24/7 for emergencies.</p>
+          <h3 style="margin-top:14px">Email</h3>
+          <p><a href="mailto:hello@debbiewebdesign.co.uk">hello@debbiewebdesign.co.uk</a></p>
+          <h3 style="margin-top:14px">Phone</h3>
+          <p><a href="tel:+441234567890">01234 567890</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cta">
+      <div>
+        <strong>Locked out or need new locks?</strong><br>
+        We’re on call 24/7 across Kent and Medway.
+      </div>
+      <div>
+        <a class="btn" href="tel:+441234567890">📞 Call 01234 567890</a>
+        <a class="btn outline" href="/contact.html">Get a Quote</a>
+      </div>
+    </div>
+    <div style="margin-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© 2025 Harbour Locksmith & Security • All rights reserved</div>
+      <div>Website by <a href="https://debbiewebdesign.co.uk">Debbie Reynolds Web Design</a></div>
+    </div>
+    <small>Harbour Locksmith & Security is a demo site for portfolio purposes.</small>
+  </div>
+</footer>
+<script>
+// simple enhancement
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>console.log('Dial...')));
+</script>
+</body></html>
+
