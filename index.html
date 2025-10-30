@@ -47,6 +47,16 @@
 }
 </script>
 </head>
+<!-- Netlify Identity widget (handles invite links + login) -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    // After login, go straight to the CMS
+    window.netlifyIdentity.on("login", () => {
+      document.location.href = "/admin/";
+    });
+  }
+</script>
 <body>
 <div class="topbar">
   <div class="container">
