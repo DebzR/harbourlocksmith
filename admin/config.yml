@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
