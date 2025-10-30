@@ -7,6 +7,8 @@ _snippets_imports:
   hugo:
     exclude:
       - hugo_instagram
+editor:
+  default_path:
 timezone: Europe/London
 markdown:
   engine: commonmark
