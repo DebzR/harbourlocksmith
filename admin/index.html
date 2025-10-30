@@ -4,7 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Site Admin</title>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:24px}.loading{opacity:.7}</style>
   </head>
-  <body></body>
+  <body>
+    <h1>Admin</h1>
+    <p class="loading">Loading editor…</p>
+
+    <!-- Let us start the CMS manually -->
+    <script>window.CMS_MANUAL_INIT = true;</script>
+
+    <!-- Primary CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <!-- Fallback CDN -->
+    <script>
+      if (typeof window.CMS === "undefined") {
+        var s=document.createElement('script');
+        s.src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js";
+        document.body.appendChild(s);
+      }
+    </script>
+
+    <!-- Start the CMS (it will automatically read /admin/config.yml) -->
+    <script>
+      (function start(){
+        if (window.CMS) { CMS.init(); }
+        else { setTimeout(start, 200); }
+      })();
+    </script>
+  </body>
 </html>
